@@ -1,0 +1,26 @@
+/*
+print fibbonacci numbers till n
+*/
+
+#include<iostream>
+using namespace std;
+
+void printfibbonacci(int n){
+
+	int a=0;
+	int b=1,c;
+	for(int i=1;i<=n;i++){
+		cout<<a<<endl;
+		c=a+b;
+		a=b;
+		b=c;
+	}
+}
+
+int main(){
+	int n;
+	cout<<"Enter the number till you want to print fibonacii"<<endl;
+	cin>>n;
+	
+	printfibbonacci(n);
+}
