@@ -1,0 +1,30 @@
+/*
+print prime nos from two given no
+*/
+
+#include<iostream>
+using namespace std;
+
+void printprime(int start,int end){
+
+	for(int i=start;i<=end;i++){
+		bool divided=false;
+		for(int j=2;j<i;j++){
+			if(i%j==0){
+				divided=true;
+				break;
+			}
+		}
+		if(!divided&&i!=1){
+			cout<<i<<endl;
+		}
+	}
+}
+
+int main(){
+	int start,end;
+	cout<<"Enter the start value and end value";
+	cin>>start>>end;
+	
+	printprime(start,end);
+}
