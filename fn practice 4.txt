@@ -1,0 +1,33 @@
+/*
+print permutation
+*/
+
+#include<iostream>
+using namespace std;
+
+int factorial(int n){
+	int fact=1;
+	while(n>0){
+		fact*=n;
+		n--;
+	}
+	return fact;
+}
+
+int main(){
+	int n,r;
+	cout<<"Enter the number you want factorial"<<endl;
+	cin>>n;
+	
+	int n_fact=factorial(n);
+	
+	cout<<"Enter the number of objects out of n"<<endl;
+	cin>>r;
+	
+	int r_fact=factorial(r);
+	
+	int n_r_fact=factorial(n-r);
+	
+	int ncr=n_fact/(r_fact*n_r_fact);
+	cout<<"The n out of r is: "<<ncr;
+}
